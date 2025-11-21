@@ -30,6 +30,26 @@ body{
 .nav-btn{display:inline-block;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.95);text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,0.04);box-shadow:0 6px 14px rgba(2,6,23,0.45)}
 .nav-btn:hover{transform:translateY(-3px);background:rgba(255,255,255,0.08)}
 
+/* subtle animated stars overlay */
+.site-header::before{
+  content:'';position:absolute;left:0;right:0;top:0;height:100%;pointer-events:none;z-index:0;
+  background-image:radial-gradient(rgba(255,255,255,0.9) 0.8px, transparent 0.9px), radial-gradient(rgba(255,255,255,0.6) 0.6px, transparent 0.7px);
+  background-size:120px 120px, 200px 200px;
+  opacity:0.11;mix-blend-mode:screen;filter:blur(0.6px);
+  animation:star-twinkle 6s linear infinite;
+}
+.site-header::after{
+  content:'';position:absolute;left:0;right:0;top:0;height:100%;pointer-events:none;z-index:0;
+  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0) 60%);
+}
+.header-inner{position:relative;z-index:2}
+
+@keyframes star-twinkle{
+  0%{opacity:0.08;transform:translateY(0)}
+  50%{opacity:0.14;transform:translateY(-1px)}
+  100%{opacity:0.08;transform:translateY(0)}
+}
+
 .hero{padding:48px 0;background:linear-gradient(90deg, var(--bg-2), transparent)}
 .hero-inner{display:flex;gap:24px;align-items:center}
 .hero-text{flex:1}
