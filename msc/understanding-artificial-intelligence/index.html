@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Understanding Artificial Intelligence — Placeholder</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <div class="brand">
+          <div class="logo">LOGO</div>
+          <div class="brand-text">
+            <div class="name">Firstname Lastname</div>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="/about.html">About Me</a>
+          <a href="/msc/index.html">E-portfolio MSc AI modules</a>
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap main">
+      <div class="module-layout">
+        <aside class="left-menu">
+          <a class="back-link" href="/msc/index.html">← Back to modules</a>
+          <nav class="left-nav">
+            <a href="#general">General</a>
+            <a href="#unit1">Unit 1</a>
+            <a href="#unit2">Unit 2</a>
+            <a href="#unit3">Unit 3</a>
+            <a href="#unit4">Unit 4</a>
+            <a href="#unit5">Unit 5</a>
+            <a href="#unit6">Unit 6</a>
+            <a href="#unit7">Unit 7</a>
+            <a href="#unit8">Unit 8</a>
+            <a href="#unit9">Unit 9</a>
+            <a href="#unit10">Unit 10</a>
+            <a href="#unit11">Unit 11</a>
+            <a href="#unit12">Unit 12</a>
+          </nav>
+        </aside>
+
+        <div class="module-content">
+          <section id="general" class="content-panel">
+            <h2>General</h2>
+            <p>Placeholder: General information about Understanding Artificial Intelligence.</p>
+          </section>
+          <section id="unit1" class="content-panel">
+            <h3>Unit 1</h3>
+            <p>Placeholder: Unit 1 content.</p>
+          </section>
+          <section id="unit2" class="content-panel">
+            <h3>Unit 2</h3>
+            <p>Placeholder: Unit 2 content.</p>
+          </section>
+          <section id="unit3" class="content-panel">
+            <h3>Unit 3</h3>
+            <p>Placeholder: Unit 3 content.</p>
+          </section>
+          <section id="unit4" class="content-panel">
+            <h3>Unit 4</h3>
+            <p>Placeholder: Unit 4 content.</p>
+          </section>
+          <section id="unit5" class="content-panel">
+            <h3>Unit 5</h3>
+            <p>Placeholder: Unit 5 content.</p>
+          </section>
+          <section id="unit6" class="content-panel">
+            <h3>Unit 6</h3>
+            <p>Placeholder: Unit 6 content.</p>
+          </section>
+          <section id="unit7" class="content-panel">
+            <h3>Unit 7</h3>
+            <p>Placeholder: Unit 7 content.</p>
+          </section>
+          <section id="unit8" class="content-panel">
+            <h3>Unit 8</h3>
+            <p>Placeholder: Unit 8 content.</p>
+          </section>
+          <section id="unit9" class="content-panel">
+            <h3>Unit 9</h3>
+            <p>Placeholder: Unit 9 content.</p>
+          </section>
+          <section id="unit10" class="content-panel">
+            <h3>Unit 10</h3>
+            <p>Placeholder: Unit 10 content.</p>
+          </section>
+          <section id="unit11" class="content-panel">
+            <h3>Unit 11</h3>
+            <p>Placeholder: Unit 11 content.</p>
+          </section>
+          <section id="unit12" class="content-panel">
+            <h3>Unit 12</h3>
+            <p>Placeholder: Unit 12 content.</p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div class="foot-left">© 2025 — Placeholder Name</div>
+        <div class="foot-right">Built with a minimal template • Hosted on GitHub Pages</div>
+      </div>
+    </footer>
+
+    <script>
+      // simple hash-based navigation to show sections
+      function showHashSection() {
+        const id = location.hash ? location.hash.slice(1) : 'general';
+        document.querySelectorAll('.content-panel').forEach(s => s.style.display = 'none');
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'block';
+      }
+      window.addEventListener('hashchange', showHashSection);
+      window.addEventListener('load', showHashSection);
+    </script>
+  </body>
+</html>

@@ -18,11 +18,10 @@
             <div class="role">Role / Title (Placeholder)</div>
           </div>
         </div>
-
         <nav class="main-nav">
-          <a href="#" data-target="about" class="nav-link">About Me</a>
-          <a href="#" data-target="msc" class="nav-link">E-portfolio MSc AI modules</a>
-          <a href="#" data-target="contact" class="nav-link">Contact</a>
+          <a href="about.html" class="nav-link">About Me</a>
+          <a href="msc/index.html" class="nav-link">E-portfolio MSc AI modules</a>
+          <a href="contact.html" class="nav-link">Contact</a>
         </nav>
       </div>
     </header>
@@ -33,8 +32,8 @@
           <h1>Firstname Lastname</h1>
           <p class="subtitle">Short tagline that describes professional focus — placeholder text.</p>
           <div class="cta-row">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn ghost" href="#contact">Get in touch</a>
+            <a class="btn primary" href="msc/index.html">View MSc modules</a>
+            <a class="btn ghost" href="contact.html">Get in touch</a>
           </div>
         </div>
         <div class="hero-image">
@@ -44,124 +43,12 @@
     </section>
 
     <main class="wrap main">
-
-      <!-- About Me (top-level) -->
-      <section id="about" class="panel about" data-view="about">
-        <div class="col">
-          <h2>About Me</h2>
-          <p>Hello world — this is a description about me. This placeholder text will be replaced later with a proper personal bio.</p>
-          <p class="small muted">Quick facts and links will go here.</p>
-        </div>
+    <main class="wrap main">
+      <!-- Front page hero only. Other pages are separate HTML files. -->
+      <section class="panel intro">
+        <h2>Welcome</h2>
+        <p>This is the front page. Use the menu above to navigate to About, MSc modules, or Contact.</p>
       </section>
-
-      <!-- MSc modules main page -->
-      <section id="msc" class="panel" data-view="msc" style="display:none">
-        <h2>E-portfolio — MSc AI modules</h2>
-        <p class="muted">Select a module to view its units and content.</p>
-        <div class="module-buttons">
-          <button class="module-btn" data-module="understanding-ai">Understanding Artificial Intelligence</button>
-          <button class="module-btn" data-module="intelligent-agents">Intelligent Agents</button>
-        </div>
-      </section>
-
-      <!-- Module pages (hidden by default) -->
-      <section id="module-understanding-ai" class="module-page" data-module="understanding-ai" style="display:none">
-        <div class="module-layout">
-          <aside class="left-menu">
-            <button class="back-btn">← Back</button>
-            <nav class="left-nav">
-              <a href="#" data-section="general">General</a>
-              <!-- Units 1-12 -->
-              <a href="#" data-section="unit1">Unit 1</a>
-              <a href="#" data-section="unit2">Unit 2</a>
-              <a href="#" data-section="unit3">Unit 3</a>
-              <a href="#" data-section="unit4">Unit 4</a>
-              <a href="#" data-section="unit5">Unit 5</a>
-              <a href="#" data-section="unit6">Unit 6</a>
-              <a href="#" data-section="unit7">Unit 7</a>
-              <a href="#" data-section="unit8">Unit 8</a>
-              <a href="#" data-section="unit9">Unit 9</a>
-              <a href="#" data-section="unit10">Unit 10</a>
-              <a href="#" data-section="unit11">Unit 11</a>
-              <a href="#" data-section="unit12">Unit 12</a>
-            </nav>
-          </aside>
-          <div class="module-content">
-            <div class="content-panel" data-section="general">Placeholder: General information about Understanding Artificial Intelligence.</div>
-            <div class="content-panel" data-section="unit1">Placeholder: Unit 1 content.</div>
-            <div class="content-panel" data-section="unit2">Placeholder: Unit 2 content.</div>
-            <div class="content-panel" data-section="unit3">Placeholder: Unit 3 content.</div>
-            <div class="content-panel" data-section="unit4">Placeholder: Unit 4 content.</div>
-            <div class="content-panel" data-section="unit5">Placeholder: Unit 5 content.</div>
-            <div class="content-panel" data-section="unit6">Placeholder: Unit 6 content.</div>
-            <div class="content-panel" data-section="unit7">Placeholder: Unit 7 content.</div>
-            <div class="content-panel" data-section="unit8">Placeholder: Unit 8 content.</div>
-            <div class="content-panel" data-section="unit9">Placeholder: Unit 9 content.</div>
-            <div class="content-panel" data-section="unit10">Placeholder: Unit 10 content.</div>
-            <div class="content-panel" data-section="unit11">Placeholder: Unit 11 content.</div>
-            <div class="content-panel" data-section="unit12">Placeholder: Unit 12 content.</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="module-intelligent-agents" class="module-page" data-module="intelligent-agents" style="display:none">
-        <div class="module-layout">
-          <aside class="left-menu">
-            <button class="back-btn">← Back</button>
-            <nav class="left-nav">
-              <a href="#" data-section="general">General</a>
-              <a href="#" data-section="unit1">Unit 1</a>
-              <a href="#" data-section="unit2">Unit 2</a>
-              <a href="#" data-section="unit3">Unit 3</a>
-              <a href="#" data-section="unit4">Unit 4</a>
-              <a href="#" data-section="unit5">Unit 5</a>
-              <a href="#" data-section="unit6">Unit 6</a>
-              <a href="#" data-section="unit7">Unit 7</a>
-              <a href="#" data-section="unit8">Unit 8</a>
-              <a href="#" data-section="unit9">Unit 9</a>
-              <a href="#" data-section="unit10">Unit 10</a>
-              <a href="#" data-section="unit11">Unit 11</a>
-              <a href="#" data-section="unit12">Unit 12</a>
-            </nav>
-          </aside>
-          <div class="module-content">
-            <div class="content-panel" data-section="general">Placeholder: General information about Intelligent Agents.</div>
-            <div class="content-panel" data-section="unit1">Placeholder: Unit 1 content.</div>
-            <div class="content-panel" data-section="unit2">Placeholder: Unit 2 content.</div>
-            <div class="content-panel" data-section="unit3">Placeholder: Unit 3 content.</div>
-            <div class="content-panel" data-section="unit4">Placeholder: Unit 4 content.</div>
-            <div class="content-panel" data-section="unit5">Placeholder: Unit 5 content.</div>
-            <div class="content-panel" data-section="unit6">Placeholder: Unit 6 content.</div>
-            <div class="content-panel" data-section="unit7">Placeholder: Unit 7 content.</div>
-            <div class="content-panel" data-section="unit8">Placeholder: Unit 8 content.</div>
-            <div class="content-panel" data-section="unit9">Placeholder: Unit 9 content.</div>
-            <div class="content-panel" data-section="unit10">Placeholder: Unit 10 content.</div>
-            <div class="content-panel" data-section="unit11">Placeholder: Unit 11 content.</div>
-            <div class="content-panel" data-section="unit12">Placeholder: Unit 12 content.</div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="panel contact-panel" data-view="contact" style="display:none">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, use the placeholder contact methods below.</p>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h4>Email</h4>
-            <p><a href="mailto:placeholder@example.com">placeholder@example.com</a></p>
-          </div>
-          <div class="contact-card">
-            <h4>LinkedIn</h4>
-            <p><a href="#">linkedin.com/in/placeholder</a></p>
-          </div>
-          <div class="contact-card">
-            <h4>Download CV</h4>
-            <p><a href="#">Placeholder CV (PDF)</a></p>
-          </div>
-        </div>
-      </section>
-
     </main>
     <script src="app.js"></script>
 
