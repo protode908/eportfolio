@@ -20,13 +20,15 @@ body{
 
 .wrap{max-width:1000px;margin:0 auto;padding:28px}
 .site-header{background:var(--bg-2);border-bottom:1px solid rgba(0,0,0,0.04);}
-.brand{display:flex;align-items:center;gap:14px}
-.logo{width:56px;height:56px;background:var(--accent);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700}
-.brand-text .name{font-weight:700}
-.brand-text .role{color:var(--muted);font-size:0.95rem}
-.main-nav{float:right;display:flex;gap:18px;align-items:center}
-.main-nav a{color:var(--muted);text-decoration:none;padding:10px 6px;border-radius:6px}
-.main-nav a:hover{background:rgba(0,0,0,0.03);color:var(--text)}
+.site-header{background:linear-gradient(180deg,#061225,#0b2340);border-bottom:1px solid rgba(255,255,255,0.03);background-image:radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);background-size:40px 40px}
+.header-inner{display:flex;align-items:center;justify-content:center;gap:16px}
+.brand-right{margin-left:auto;display:flex;align-items:center;gap:12px}
+.avatar{width:56px;height:56px;border-radius:50%;border:2px solid rgba(255,255,255,0.12);box-shadow:0 6px 18px rgba(0,0,0,0.4);background:#fff}
+.brand-text .name{font-weight:700;color:#fff}
+.brand-text .role{color:rgba(255,255,255,0.8);font-size:0.9rem}
+.main-nav.centered{display:flex;gap:20px;justify-content:center;flex:1}
+.nav-btn{display:inline-block;padding:10px 18px;border-radius:10px;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.95);text-decoration:none;font-weight:700;border:1px solid rgba(255,255,255,0.04);box-shadow:0 6px 14px rgba(2,6,23,0.45)}
+.nav-btn:hover{transform:translateY(-3px);background:rgba(255,255,255,0.08)}
 
 .hero{padding:48px 0;background:linear-gradient(90deg, var(--bg-2), transparent)}
 .hero-inner{display:flex;gap:24px;align-items:center}
