@@ -25,11 +25,45 @@
     </header>
 
     <main class="wrap main">
-      <section class="panel">
-        <h2>MSc Computing Project</h2>
-        <p>Placeholder page for the MSc Computing Project module.</p>
-      </section>
+      <div class="module-layout">
+        <aside class="left-menu">
+          <a class="back-link" href="../index.html">← Back to modules</a>
+          <nav class="left-nav">
+            <a href="#general">General</a>
+            <a href="#unit1">Unit 1</a>
+            <a href="#unit2">Unit 2</a>
+            <a href="#unit3">Unit 3</a>
+            <a href="#unit4">Unit 4</a>
+            <a href="#unit5">Unit 5</a>
+            <a href="#unit6">Unit 6</a>
+            <a href="#unit7">Unit 7</a>
+            <a href="#unit8">Unit 8</a>
+            <a href="#unit9">Unit 9</a>
+            <a href="#unit10">Unit 10</a>
+            <a href="#unit11">Unit 11</a>
+            <a href="#unit12">Unit 12</a>
+          </nav>
+        </aside>
+        <div class="module-content">
+          <section id="general" class="content-panel"><h2>General</h2><p>General information about the MSc Computing Project.</p></section>
+          <section id="unit1" class="content-panel"><h3>Unit 1</h3><p>Placeholder content for Unit 1.</p></section>
+          <section id="unit2" class="content-panel"><h3>Unit 2</h3><p>Placeholder content for Unit 2.</p></section>
+          <section id="unit3" class="content-panel"><h3>Unit 3</h3><p>Placeholder content for Unit 3.</p></section>
+          <section id="unit4" class="content-panel"><h3>Unit 4</h3><p>Placeholder content for Unit 4.</p></section>
+          <section id="unit5" class="content-panel"><h3>Unit 5</h3><p>Placeholder content for Unit 5.</p></section>
+          <section id="unit6" class="content-panel"><h3>Unit 6</h3><p>Placeholder content for Unit 6.</p></section>
+          <section id="unit7" class="content-panel"><h3>Unit 7</h3><p>Placeholder content for Unit 7.</p></section>
+          <section id="unit8" class="content-panel"><h3>Unit 8</h3><p>Placeholder content for Unit 8.</p></section>
+          <section id="unit9" class="content-panel"><h3>Unit 9</h3><p>Placeholder content for Unit 9.</p></section>
+          <section id="unit10" class="content-panel"><h3>Unit 10</h3><p>Placeholder content for Unit 10.</p></section>
+          <section id="unit11" class="content-panel"><h3>Unit 11</h3><p>Placeholder content for Unit 11.</p></section>
+          <section id="unit12" class="content-panel"><h3>Unit 12</h3><p>Placeholder content for Unit 12.</p></section>
+        </div>
+      </div>
     </main>
+    <script>
+      function showHashSection(){const id=location.hash?location.hash.slice(1):'general';document.querySelectorAll('.content-panel').forEach(s=>s.style.display='none');const el=document.getElementById(id);if(el)el.style.display='block';document.querySelectorAll('.left-nav a').forEach(a=>{const target=a.getAttribute('href').replace('#','');if(target===id){a.classList.add('active');a.classList.remove('faded')}else{a.classList.remove('active');a.classList.add('faded')}})}window.addEventListener('hashchange',showHashSection);window.addEventListener('load',showHashSection);
+    </script>
 
     <footer class="site-footer">
       <div class="wrap footer-inner">
