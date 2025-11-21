@@ -57,6 +57,13 @@ body{
 
 .project-list{padding-left:1rem}
 
+/* Modules index button grid */
+.module-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.module-btn{display:flex;align-items:center;justify-content:center;padding:20px;border-radius:12px;background:var(--card);box-shadow:0 6px 18px rgba(34,37,34,0.06);text-decoration:none;color:var(--text);font-weight:700;border:1px solid rgba(0,0,0,0.04);transition:transform .12s ease,box-shadow .12s ease}
+.module-btn:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(34,37,34,0.08)}
+.module-btn .label{display:block;text-align:center}
+.module-btn .meta{display:block;color:var(--muted);font-weight:500;font-size:0.9rem;margin-top:6px}
+
 /* Module layout and left menu styles */
 .module-layout{display:flex;gap:20px;align-items:flex-start}
 .left-menu{width:220px}
