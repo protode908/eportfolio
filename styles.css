@@ -57,6 +57,21 @@ body{
 
 .project-list{padding-left:1rem}
 
+/* Module layout and left menu styles */
+.module-layout{display:flex;gap:20px;align-items:flex-start}
+.left-menu{width:220px}
+.left-nav{margin-top:12px}
+.left-nav a{display:block;padding:8px 10px;color:var(--muted);text-decoration:none;border-radius:6px;margin:6px 0}
+.left-nav a:hover{background:rgba(0,0,0,0.03);color:var(--text)}
+.left-menu{position:sticky;top:24px;align-self:start}
+.left-nav a.active{background:var(--accent);color:var(--text);font-weight:700}
+.left-nav a.faded{opacity:0.55}
+
+.module-content{flex:1}
+.content-panel{display:none;padding:6px 0}
+.content-panel:target{display:block}
+
+
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
 .contact-card{background:var(--bg-2);padding:14px;border-radius:8px}
 
