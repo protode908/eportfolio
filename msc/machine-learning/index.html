@@ -5,22 +5,114 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Machine Learning — Placeholder</title>
     <link rel="stylesheet" href="../../styles.css">
-  </head>
-  <body>
-    <header class="site-header new-top">
-      <div class="wrap header-inner">
-        <nav class="main-nav centered">
-          <a class="top-btn" href="../../sitemap.html">Sitemap</a>
-          <a class="top-btn" href="../../about.html">About Me</a>
-          <a class="top-btn" href="../index.html">E-portfolio</a>
-          <a class="top-btn" href="../../contact.html">Contact</a>
-        </nav>
-        <div class="brand-right">
-          <div class="avatar-wrap">
-            <img src="../../assets/avatar.svg" alt="Ariel Mella" class="avatar">
-            <div class="avatar-name">Ariel Mella</div>
-          </div>
+    <main>
+      <div class="module-banner">
+        <a href="/msc/" class="back-btn">← Modules</a>
+        <div class="module-title">Machine Learning (ML)</div>
+        <div style="width:90px"></div>
+      </div>
+
+      <div class="module-shell">
+        <div class="module-content-pane">
+          <section id="general" class="content-panel" style="display:block">
+            <h3>General</h3>
+            <p>Overview and resources for the Machine Learning module.</p>
+          </section>
+
+          <section id="unit1" class="content-panel">
+            <h3>Unit 1</h3>
+            <p>Placeholder for Unit 1 content.</p>
+          </section>
+          <section id="unit2" class="content-panel">
+            <h3>Unit 2</h3>
+            <p>Placeholder for Unit 2 content.</p>
+          </section>
+          <section id="unit3" class="content-panel">
+            <h3>Unit 3</h3>
+            <p>Placeholder for Unit 3 content.</p>
+          </section>
+          <section id="unit4" class="content-panel">
+            <h3>Unit 4</h3>
+            <p>Placeholder for Unit 4 content.</p>
+          </section>
+          <section id="unit5" class="content-panel">
+            <h3>Unit 5</h3>
+            <p>Placeholder for Unit 5 content.</p>
+          </section>
+          <section id="unit6" class="content-panel">
+            <h3>Unit 6</h3>
+            <p>Placeholder for Unit 6 content.</p>
+          </section>
+          <section id="unit7" class="content-panel">
+            <h3>Unit 7</h3>
+            <p>Placeholder for Unit 7 content.</p>
+          </section>
+          <section id="unit8" class="content-panel">
+            <h3>Unit 8</h3>
+            <p>Placeholder for Unit 8 content.</p>
+          </section>
+          <section id="unit9" class="content-panel">
+            <h3>Unit 9</h3>
+            <p>Placeholder for Unit 9 content.</p>
+          </section>
+          <section id="unit10" class="content-panel">
+            <h3>Unit 10</h3>
+            <p>Placeholder for Unit 10 content.</p>
+          </section>
+          <section id="unit11" class="content-panel">
+            <h3>Unit 11</h3>
+            <p>Placeholder for Unit 11 content.</p>
+          </section>
+          <section id="unit12" class="content-panel">
+            <h3>Unit 12</h3>
+            <p>Placeholder for Unit 12 content.</p>
+          </section>
         </div>
+
+        <nav class="unit-nav" aria-label="Units">
+          <a href="#general" class="unit-btn active" data-target="general">General</a>
+          <a href="#unit1" class="unit-btn faded" data-target="unit1">Unit 1</a>
+          <a href="#unit2" class="unit-btn faded" data-target="unit2">Unit 2</a>
+          <a href="#unit3" class="unit-btn faded" data-target="unit3">Unit 3</a>
+          <a href="#unit4" class="unit-btn faded" data-target="unit4">Unit 4</a>
+          <a href="#unit5" class="unit-btn faded" data-target="unit5">Unit 5</a>
+          <a href="#unit6" class="unit-btn faded" data-target="unit6">Unit 6</a>
+          <a href="#unit7" class="unit-btn faded" data-target="unit7">Unit 7</a>
+          <a href="#unit8" class="unit-btn faded" data-target="unit8">Unit 8</a>
+          <a href="#unit9" class="unit-btn faded" data-target="unit9">Unit 9</a>
+          <a href="#unit10" class="unit-btn faded" data-target="unit10">Unit 10</a>
+          <a href="#unit11" class="unit-btn faded" data-target="unit11">Unit 11</a>
+          <a href="#unit12" class="unit-btn faded" data-target="unit12">Unit 12</a>
+        </nav>
+      </div>
+
+      <script>
+        // Module unit switcher: show target section, update active/faded classes
+        (function(){
+          function showTarget(id){
+            document.querySelectorAll('.module-content-pane .content-panel').forEach(function(s){s.style.display='none'});
+            var el = document.getElementById(id);
+            if(el) el.style.display='block';
+            // update buttons
+            document.querySelectorAll('.unit-nav .unit-btn').forEach(function(b){
+              if(b.dataset.target===id){ b.classList.add('active'); b.classList.remove('faded'); }
+              else { b.classList.remove('active'); b.classList.add('faded'); }
+            });
+          }
+
+          // wire clicks
+          document.querySelectorAll('.unit-nav .unit-btn').forEach(function(b){
+            b.addEventListener('click', function(ev){ ev.preventDefault(); var t=b.dataset.target; history.replaceState(null,'', '#'+t); showTarget(t); });
+          });
+
+          // on load, show hash or default
+          var start = location.hash ? location.hash.replace('#','') : 'general';
+          showTarget(start);
+          // handle popstate (back/forward)
+          window.addEventListener('popstate', function(){ var h = location.hash ? location.hash.replace('#','') : 'general'; showTarget(h); });
+        })();
+      </script>
+    </main>
       </div>
     </header>
     <main class="site-main">

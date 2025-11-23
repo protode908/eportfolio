@@ -26,7 +26,10 @@
     <main class="site-main">
       <div class="content-placeholder"></div>
       <div class="module-content">
-        <section id="general" class="content-panel"><h2>General</h2><p>General information about the MSc Computing Project.</p></section>
+          <section id="general" class="content-panel" style="display:block">
+            <h3>General</h3>
+            <p>Overview and resources for the MSc Computing Project.</p>
+          </section>
           <section id="unit1" class="content-panel"><h3>Unit 1</h3><p>Placeholder content for Unit 1.</p></section>
           <section id="unit2" class="content-panel"><h3>Unit 2</h3><p>Placeholder content for Unit 2.</p></section>
           <section id="unit3" class="content-panel"><h3>Unit 3</h3><p>Placeholder content for Unit 3.</p></section>
@@ -41,6 +44,40 @@
           <section id="unit12" class="content-panel"><h3>Unit 12</h3><p>Placeholder content for Unit 12.</p></section>
         </div>
       </div>
+        <nav class="unit-nav" aria-label="Units">
+          <a href="#general" class="unit-btn active" data-target="general">General</a>
+          <a href="#unit1" class="unit-btn faded" data-target="unit1">Unit 1</a>
+          <a href="#unit2" class="unit-btn faded" data-target="unit2">Unit 2</a>
+          <a href="#unit3" class="unit-btn faded" data-target="unit3">Unit 3</a>
+          <a href="#unit4" class="unit-btn faded" data-target="unit4">Unit 4</a>
+          <a href="#unit5" class="unit-btn faded" data-target="unit5">Unit 5</a>
+          <a href="#unit6" class="unit-btn faded" data-target="unit6">Unit 6</a>
+          <a href="#unit7" class="unit-btn faded" data-target="unit7">Unit 7</a>
+          <a href="#unit8" class="unit-btn faded" data-target="unit8">Unit 8</a>
+          <a href="#unit9" class="unit-btn faded" data-target="unit9">Unit 9</a>
+          <a href="#unit10" class="unit-btn faded" data-target="unit10">Unit 10</a>
+          <a href="#unit11" class="unit-btn faded" data-target="unit11">Unit 11</a>
+          <a href="#unit12" class="unit-btn faded" data-target="unit12">Unit 12</a>
+        </nav>
+        <script>
+          (function(){
+            function showTarget(id){
+              document.querySelectorAll('.module-content-pane .content-panel').forEach(function(s){s.style.display='none'});
+              var el = document.getElementById(id);
+              if(el) el.style.display='block';
+              document.querySelectorAll('.unit-nav .unit-btn').forEach(function(b){
+                if(b.dataset.target===id){ b.classList.add('active'); b.classList.remove('faded'); }
+                else { b.classList.remove('active'); b.classList.add('faded'); }
+              });
+            }
+            document.querySelectorAll('.unit-nav .unit-btn').forEach(function(b){
+              b.addEventListener('click', function(ev){ ev.preventDefault(); var t=b.dataset.target; history.replaceState(null,'', '#'+t); showTarget(t); });
+            });
+            var start = location.hash ? location.hash.replace('#','') : 'general';
+            showTarget(start);
+            window.addEventListener('popstate', function(){ var h = location.hash ? location.hash.replace('#','') : 'general'; showTarget(h); });
+          })();
+        </script>
     </main>
     <script>
       function showHashSection(){const id=location.hash?location.hash.slice(1):'general';document.querySelectorAll('.content-panel').forEach(s=>s.style.display='none');const el=document.getElementById(id);if(el)el.style.display='block';document.querySelectorAll('.left-nav a').forEach(a=>{const target=a.getAttribute('href').replace('#','');if(target===id){a.classList.add('active');a.classList.remove('faded')}else{a.classList.remove('active');a.classList.add('faded')}})}window.addEventListener('hashchange',showHashSection);window.addEventListener('load',showHashSection);

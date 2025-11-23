@@ -110,6 +110,25 @@ body{padding-top:84px}
 .content-panel{display:none;padding:6px 0}
 .content-panel:target{display:block}
 
+/* Module specific layout: banner + content pane + right-side unit nav */
+.module-banner{height:12vh;min-height:72px;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.03);position:relative}
+.module-banner .module-title{font-size:1.25rem;color:#fff;font-weight:700}
+.module-banner .back-btn{background:rgba(255,255,255,0.06);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,0.04)}
+
+.module-shell{display:flex;gap:18px;align-items:flex-start;padding:18px}
+.module-content-pane{flex:1;min-height:60vh}
+.unit-nav{width:180px;display:flex;flex-direction:column;gap:10px}
+.unit-btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--bg-2);color:var(--text);text-decoration:none;font-weight:700;border:1px solid rgba(0,0,0,0.04);text-align:center}
+.unit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(34,37,34,0.06)}
+.unit-btn.active{background:var(--accent);color:var(--text);box-shadow:0 8px 20px rgba(34,37,34,0.08)}
+.unit-btn.faded{opacity:0.48}
+
+@media (max-width:900px){
+  .module-shell{flex-direction:column}
+  .unit-nav{width:100%;flex-direction:row;flex-wrap:wrap}
+  .unit-btn{flex:1}
+}
+
 
 .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
 .contact-card{background:var(--bg-2);padding:14px;border-radius:8px}
