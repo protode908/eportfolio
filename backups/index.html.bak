@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Portfolio — Placeholder</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Anonymized e-portfolio template with placeholders">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <div class="brand">
+          <div class="logo">LOGO</div>
+          <div class="brand-text">
+            <div class="name">Firstname Lastname</div>
+            <div class="role">Role / Title (Placeholder)</div>
+          </div>
+        </div>
+        <nav class="main-nav">
+          <a href="about.html" class="nav-link">About Me</a>
+          <nav class="main-nav centered">
+            <a class="nav-btn" href="about.html">About Me</a>
+            <a class="nav-btn" href="msc/index.html">E-portfolio MSc AI modules</a>
+            <a class="nav-btn" href="contact.html">Contact</a>
+            <a class="nav-btn" href="sitemap.html">Sitemap</a>
+          </nav>
+          <div class="brand-right">
+            <img src="assets/avatar.svg" alt="Ariel Mella" class="avatar">
+            <div class="brand-text"><div class="name">E-Portfolio</div><div class="role">Ariel Mella</div></div>
+          </div>
+    </header>
+
+    <main class="wrap main">
+      <!-- Minimal front page: header/nav visible; rest intentionally empty.
+           Users should use the top menu to navigate to other pages. -->
+      <section class="panel intro" style="min-height:200px;display:flex;align-items:center;justify-content:center;">
+        <p style="color:var(--muted);">Use the top menu to navigate to About, MSc modules, Contact, or Sitemap.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div class="foot-left">© 2025 — Placeholder Name</div>
+        <div class="foot-right">Built with a minimal template • Hosted on GitHub Pages</div>
+      </div>
+    </footer>
+
+  </body>
+</html>
