@@ -238,6 +238,39 @@ input, select, textarea {
 		font-size: 1.35em;
 	}
 
+	/* Footer / social icon size overrides (reduce scale by ~50%) */
+	#footer {
+		padding: 1.5rem 0; /* reduce vertical padding */
+	}
+
+	#footer .icons li a {
+		font-size: 0.9rem; /* base text size for labels */
+	}
+
+	#footer .icons li a .label {
+		display: none; /* hide textual labels to save space */
+	}
+
+	#footer .icons li a {
+		width: 2.4rem;
+		height: 2.4rem;
+		line-height: 2.4rem;
+		display: inline-block;
+		text-align: center;
+	}
+
+	#footer .icons li a .fa {
+		font-size: 1.05rem; /* reduce icon size */
+	}
+
+	#footer .icons {
+		margin-bottom: 0.5rem;
+	}
+
+	#footer .copyright {
+		font-size: 0.8rem;
+	}
+
 	h4 {
 		font-size: 1.1em;
 	}
