@@ -136,12 +136,13 @@ input, select, textarea {
 	white-space: nowrap;
 	overflow: hidden;
 	border-right: .12em solid #9bf1ff; /* caret */
-	animation: typing 3.5s steps(30, end), blink-caret .75s step-end infinite;
+	width: 26ch; /* exact width of the text */
+	animation: typing 3.5s steps(26, end) forwards, blink-caret .75s step-end infinite;
 }
 
 @keyframes typing {
-	from { width: 0; }
-	to { width: 100%; }
+	from { width: 0ch; }
+	to { width: 26ch; }
 }
 
 @keyframes blink-caret {
