@@ -130,6 +130,26 @@ input, select, textarea {
 				font-size: 14pt;
 			}
 
+/* Console-style blinking caret for banner name */
+.console-name {
+	position: relative;
+}
+.console-name::after {
+	content: "";
+	display: inline-block;
+	width: 0.6ch;
+	height: 1.15em;
+	margin-left: 0.25ch;
+	background: #9bf1ff;
+	vertical-align: bottom;
+	animation: blink-caret 1s steps(1) infinite;
+}
+
+@keyframes blink-caret {
+	0%, 50% { opacity: 1; }
+	51%, 100% { opacity: 0; }
+}
+
 		}
 
 		@media screen and (max-width: 1280px) {
